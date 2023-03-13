@@ -91,7 +91,7 @@
                     </div>
             </InsertItemTemplate>
             <ItemTemplate>
-                <asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="Insert" />
+                <asp:LinkButton class="btn btn-success my-4" ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="Insert" />
             </ItemTemplate>
         </asp:FormView>
 
