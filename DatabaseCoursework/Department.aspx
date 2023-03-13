@@ -9,7 +9,7 @@
 </head>
 <body style="font-family: Verdana">
     <nav class="navbar navbar-light bg-light px-4">
-        <a class="navbar-brand fw-bold " runat="server" href="~/Home.aspx" style="color: #888A8C"><span style="color: #00CB5B";><</span>TECHNOLOGIES<span style="color: #00CB5B">></span></a>
+        <a class="navbar-brand fw-bold " runat="server" href="~/Home.aspx" style="color: #888A8C"><span style="color: #00CB5B";><</span>ISLINGTON TECHNOLOGIES<span style="color: #00CB5B">></span></a>
     </nav>
     <nav class="navbar navbar-expand-lg navbar-light bg-light w-100" >
         <div id="navbarNavAltMarkup" class="w-100">
@@ -26,6 +26,7 @@
     <form id="form1" runat="server">
         <asp:FormView ID="FormView1" runat="server" DataKeyNames="DEPARTMENT_ID" DataSourceID="SqlDataSource1" class="w-100 d-flex justify-content-center">
             <InsertItemTemplate>
+                <div class="w-100 d-flex flex-column align-content-between px-5 py-3 my-3 rounded-3" style="background-color: #F5F8FC">
                 DEPARTMENT_ID:
                 <asp:TextBox ID="DEPARTMENT_IDTextBox" runat="server" Text='<%# Bind("DEPARTMENT_ID") %>' />
                 <br />
@@ -35,8 +36,9 @@
                 DEPARTMENT_CONTACT:
                 <asp:TextBox ID="DEPARTMENT_CONTACTTextBox" runat="server" Text='<%# Bind("DEPARTMENT_CONTACT") %>' />
                 <br />
-                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
-                &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+                <asp:LinkButton  class="btn btn-success" ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
+                &nbsp;<asp:LinkButton  class="btn btn-danger" ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+            <div />
             </InsertItemTemplate>
             <ItemTemplate>
                 &nbsp;<asp:LinkButton class="btn btn-success my-4" ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="Insert" />
@@ -45,7 +47,7 @@
         <div class="d-flex w-100 justify-content-center">
             <asp:GridView class="table" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="DEPARTMENT_ID" DataSourceID="SqlDataSource1">
                 <Columns>
-                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ControlStyle-BackColor="#FF9C00" ControlStyle-CssClass="m-2 text-light text-decoration-none px-2 py-1 rounded-3"/>
                     <asp:BoundField DataField="DEPARTMENT_ID" HeaderText="Id" ReadOnly="True" SortExpression="DEPARTMENT_ID" />
                     <asp:BoundField DataField="DEPARTMENT_NAME" HeaderText="Department Name" SortExpression="DEPARTMENT_NAME" />
                     <asp:BoundField DataField="DEPARTMENT_CONTACT" HeaderText="Contact" SortExpression="DEPARTMENT_CONTACT" />

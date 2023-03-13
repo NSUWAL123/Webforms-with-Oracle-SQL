@@ -9,7 +9,7 @@
 </head>
 <body style="font-family: Verdana">
     <nav class="navbar navbar-light bg-light px-4">
-        <a class="navbar-brand fw-bold " runat="server" href="~/Home.aspx" style="color: #888A8C"><span style="color: #00CB5B";><</span>TECHNOLOGIES<span style="color: #00CB5B">></span></a>
+        <a class="navbar-brand fw-bold " runat="server" href="~/Home.aspx" style="color: #888A8C"><span style="color: #00CB5B";><</span>ISLINGTON TECHNOLOGIES<span style="color: #00CB5B">></span></a>
     </nav>
     <nav class="navbar navbar-expand-lg navbar-light bg-light w-100" >
         <div id="navbarNavAltMarkup" class="w-100">
@@ -26,19 +26,21 @@
     <form id="form1" runat="server">
         <asp:FormView ID="FormView1" runat="server" DataKeyNames="ROLE_ID" DataSourceID="SqlDataSource1" class="w-100 d-flex justify-content-center">
             <InsertItemTemplate>
-                ROLE_ID:
-                <asp:TextBox ID="ROLE_IDTextBox" runat="server" Text='<%# Bind("ROLE_ID") %>' />
-                <br />
-                ROLE_NAME:
-                <asp:TextBox ID="ROLE_NAMETextBox" runat="server" Text='<%# Bind("ROLE_NAME") %>' />
-                <br />
-                JOB_ID:
-                <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="Jobname" DataTextField="JOB_NAME" DataValueField="JOB_ID" SelectedValue='<%# Bind("JOB_ID") %>'>
-                </asp:DropDownList>
-                <asp:SqlDataSource ID="Jobname" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" ProviderName="<%$ ConnectionStrings:ConnectionString2.ProviderName %>" SelectCommand="SELECT &quot;JOB_ID&quot;, &quot;JOB_NAME&quot; FROM &quot;JOB&quot;"></asp:SqlDataSource>
-                <br />
-                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
-                &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+                <div class="w-100 d-flex flex-column align-content-between px-5 py-3 my-3 rounded-3" style="background-color: #F5F8FC">
+                    ROLE_ID:
+                    <asp:TextBox ID="ROLE_IDTextBox" runat="server" Text='<%# Bind("ROLE_ID") %>' />
+                    <br />
+                    ROLE_NAME:
+                    <asp:TextBox ID="ROLE_NAMETextBox" runat="server" Text='<%# Bind("ROLE_NAME") %>' />
+                    <br />
+                    JOB_ID:
+                    <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="Jobname" DataTextField="JOB_NAME" DataValueField="JOB_ID" SelectedValue='<%# Bind("JOB_ID") %>'>
+                    </asp:DropDownList>
+                    <asp:SqlDataSource ID="Jobname" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" ProviderName="<%$ ConnectionStrings:ConnectionString2.ProviderName %>" SelectCommand="SELECT &quot;JOB_ID&quot;, &quot;JOB_NAME&quot; FROM &quot;JOB&quot;"></asp:SqlDataSource>
+                    <br />
+                    <asp:LinkButton  class="btn btn-success" ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
+                    &nbsp;<asp:LinkButton  class="btn btn-danger" ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+                </div>
             </InsertItemTemplate>
             <ItemTemplate>
                
@@ -48,7 +50,7 @@
         <div class="d-flex w-100 justify-content-center">
             <asp:GridView class="table" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ROLE_ID" DataSourceID="SqlDataSource1">
                 <Columns>
-                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ControlStyle-BackColor="#FF9C00" ControlStyle-CssClass="m-2 text-light text-decoration-none px-2 py-1 rounded-3" />
                     <asp:BoundField DataField="ROLE_ID" HeaderText="ROLE_ID" ReadOnly="True" SortExpression="ROLE_ID" />
                     <asp:BoundField DataField="ROLE_NAME" HeaderText="ROLE_NAME" SortExpression="ROLE_NAME" />
                     <asp:BoundField DataField="JOB_ID" HeaderText="JOB_ID" SortExpression="JOB_ID" />

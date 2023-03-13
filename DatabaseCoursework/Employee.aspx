@@ -9,7 +9,7 @@
 </head>
 <body class="" style="font-family: Verdana">
     <nav class="navbar navbar-light bg-light px-4">
-        <a class="navbar-brand fw-bold " runat="server" href="~/Home.aspx" style="color: #888A8C"><span style="color: #00CB5B";><</span>TECHNOLOGIES<span style="color: #00CB5B">></span></a>
+        <a class="navbar-brand fw-bold " runat="server" href="~/Home.aspx" style="color: #888A8C"><span style="color: #00CB5B";><</span>ISLINGTON TECHNOLOGIES<span style="color: #00CB5B">></span></a>
     </nav>
     <nav class="navbar navbar-expand-lg navbar-light bg-light w-100" >
         <div id="navbarNavAltMarkup" class="w-100">
@@ -55,40 +55,40 @@
         <asp:FormView ID="FormView1" runat="server" DataKeyNames="SN" DataSourceID="SqlDataSource1" class="w-100 d-flex justify-content-center">
             <InsertItemTemplate>
                 <div class="w-100 d-flex flex-column align-content-between px-5 py-3 my-3 rounded-3" style="background-color: #F5F8FC">
-                SN:        
-                <asp:TextBox ID="SNTextBox" runat="server" Text='<%# Bind("SN") %>' />
-                <br />
-                EMPLOYEE_NAME:
-                <asp:TextBox ID="EMPLOYEE_NAMETextBox" runat="server" Text='<%# Bind("EMPLOYEE_NAME") %>' />
-                <br />
-                CONTACT_NUMBER:
-                <asp:TextBox ID="CONTACT_NUMBERTextBox" runat="server" Text='<%# Bind("CONTACT_NUMBER") %>' />
-                <br />
-                DOB:
-                <asp:TextBox ID="DOBTextBox" runat="server" Text='<%# Bind("DOB") %>' />
-                <br />
-                ROLE_ID:
-                <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="ROLE_NAME" DataValueField="ROLE_ID" SelectedValue='<%# Bind("ROLE_ID") %>'>
-                </asp:DropDownList>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" ProviderName="<%$ ConnectionStrings:ConnectionString2.ProviderName %>" SelectCommand="SELECT &quot;ROLE_ID&quot;, &quot;ROLE_NAME&quot; FROM &quot;ROLE&quot;"></asp:SqlDataSource>
-                <br />
-                DEPARTMENT_ID:
-                <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource2" DataTextField="DEPARTMENT_NAME" DataValueField="DEPARTMENT_ID" SelectedValue='<%# Bind("DEPARTMENT_ID") %>'>
-                </asp:DropDownList>
-                <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" ProviderName="<%$ ConnectionStrings:ConnectionString2.ProviderName %>" SelectCommand="SELECT &quot;DEPARTMENT_ID&quot;, &quot;DEPARTMENT_NAME&quot; FROM &quot;DEPARTMENT&quot;"></asp:SqlDataSource>
-                <br />
-                GENDER:
-                <asp:TextBox ID="GENDERTextBox" runat="server" Text='<%# Bind("GENDER") %>' />
-                <br />
-                SALARY:
-                <asp:TextBox ID="SALARYTextBox" runat="server" Text='<%# Bind("SALARY") %>' />
-                <br />
-                HIGHEST_QUALIFICATION:
-                <asp:TextBox ID="HIGHEST_QUALIFICATIONTextBox" runat="server" Text='<%# Bind("HIGHEST_QUALIFICATION") %>' />
-                <br />
-                <asp:LinkButton class="btn btn-success" ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
-                &nbsp;<asp:LinkButton class="btn btn-danger" ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
-                    </div>
+                    SN:        
+                    <asp:TextBox ID="SNTextBox" runat="server" Text='<%# Bind("SN") %>' />
+                    <br />
+                    EMPLOYEE_NAME:
+                    <asp:TextBox ID="EMPLOYEE_NAMETextBox" runat="server" Text='<%# Bind("EMPLOYEE_NAME") %>' />
+                    <br />
+                    CONTACT_NUMBER:
+                    <asp:TextBox ID="CONTACT_NUMBERTextBox" runat="server" Text='<%# Bind("CONTACT_NUMBER") %>' />
+                    <br />
+                    DOB:
+                    <asp:TextBox ID="DOBTextBox" runat="server" Text='<%# Bind("DOB") %>' />
+                    <br />
+                    ROLE_ID:
+                    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="ROLE_NAME" DataValueField="ROLE_ID" SelectedValue='<%# Bind("ROLE_ID") %>'>
+                    </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" ProviderName="<%$ ConnectionStrings:ConnectionString2.ProviderName %>" SelectCommand="SELECT &quot;ROLE_ID&quot;, &quot;ROLE_NAME&quot; FROM &quot;ROLE&quot;"></asp:SqlDataSource>
+                    <br />
+                    DEPARTMENT_ID:
+                    <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="SqlDataSource2" DataTextField="DEPARTMENT_NAME" DataValueField="DEPARTMENT_ID" SelectedValue='<%# Bind("DEPARTMENT_ID") %>'>
+                    </asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" ProviderName="<%$ ConnectionStrings:ConnectionString2.ProviderName %>" SelectCommand="SELECT &quot;DEPARTMENT_ID&quot;, &quot;DEPARTMENT_NAME&quot; FROM &quot;DEPARTMENT&quot;"></asp:SqlDataSource>
+                    <br />
+                    GENDER:
+                    <asp:TextBox ID="GENDERTextBox" runat="server" Text='<%# Bind("GENDER") %>' />
+                    <br />
+                    SALARY:
+                    <asp:TextBox ID="SALARYTextBox" runat="server" Text='<%# Bind("SALARY") %>' />
+                    <br />
+                    HIGHEST_QUALIFICATION:
+                    <asp:TextBox ID="HIGHEST_QUALIFICATIONTextBox" runat="server" Text='<%# Bind("HIGHEST_QUALIFICATION") %>' />
+                    <br />
+                    <asp:LinkButton class="btn btn-success" ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
+                    &nbsp;<asp:LinkButton class="btn btn-danger" ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+                </div>
             </InsertItemTemplate>
             <ItemTemplate>
                 <asp:LinkButton class="btn btn-success my-4" ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="Insert" />
@@ -97,7 +97,7 @@
 
         <asp:GridView class="table " ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="SN" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
             <Columns>
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True"/>
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ControlStyle-BackColor="#FF9C00" ControlStyle-CssClass="m-1 text-light text-decoration-none px-2 py-1 rounded-3"/>
                 <asp:BoundField DataField="SN" HeaderText="Id" ReadOnly="True" SortExpression="SN" />
                 <asp:BoundField DataField="EMPLOYEE_NAME" HeaderText="Name" SortExpression="EMPLOYEE_NAME" />
                 <asp:BoundField DataField="DOB" HeaderText="DOB" SortExpression="DOB" />
