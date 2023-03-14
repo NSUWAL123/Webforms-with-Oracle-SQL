@@ -11,9 +11,9 @@
     <nav class="navbar navbar-light bg-light px-4">
         <a class="navbar-brand fw-bold " runat="server" href="~/Home.aspx" style="color: #888A8C"><span style="color: #00CB5B";><</span>ISLINGTON TECHNOLOGIES<span style="color: #00CB5B">></span></a>
         <div class="d-flex w-50 justify-content-around">
-            <a href="/EmployeeHistoryMappingForm.aspx" class="btn nav-item nav-link fw-bold px-3 py-1 text-white" style="background-color: #FF9C00">Job History</a>
-            <a href="/EmployeeOfTheMonthForm.aspx" class="btn nav-item nav-link fw-bold px-3 py-1 text-white" style="background-color: #FF9C00">Employee of the Month</a>
-            <a href="/VotingRecordForm.aspx" class="btn nav-item nav-link fw-bold px-3 py-1 text-white" style="background-color: #FF9C00">Voting Record</a>
+            <a href="/EmployeeHistoryMappingForm.aspx" class="btn nav-item nav-link rounded-5 px-3 py-1 text-white" style="background-color: #FF9C00">Job History</a>
+            <a href="/EmployeeOfTheMonthForm.aspx" class="btn nav-item nav-link rounded-5 px-3 py-1 text-white" style="background-color: #FF9C00">Employee of the Month</a>
+            <a href="/VotingRecordForm.aspx" class="btn nav-item nav-link rounded-5 px-3 py-1 text-white" style="background-color: #FF9C00">Voting Record</a>
         </div>
     </nav>
     <nav class="navbar navbar-expand-lg navbar-light bg-light w-100" >
@@ -51,9 +51,11 @@
             <div class="">
                 <asp:GridView class="table" ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
                     <Columns>
-                        <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ControlStyle-BackColor="#FF9C00" ControlStyle-CssClass="m-2 text-light text-decoration-none px-2 py-1 rounded-3" />
-                        <asp:BoundField DataField="JOB_ID" HeaderText="JOB_ID" SortExpression="JOB_ID" />
-                        <asp:BoundField DataField="JOB_NAME" HeaderText="JOB_NAME" SortExpression="JOB_NAME" />
+                        <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ControlStyle-BackColor="#FF9C00" ControlStyle-CssClass="m-2 text-light text-decoration-none px-2 py-1 rounded-3" >
+<ControlStyle BackColor="#FF9C00" CssClass="m-2 text-light text-decoration-none px-2 py-1 rounded-3"></ControlStyle>
+                        </asp:CommandField>
+                        <asp:BoundField DataField="JOB_ID" HeaderText="Job Id" SortExpression="JOB_ID" />
+                        <asp:BoundField DataField="JOB_NAME" HeaderText="Job Name" SortExpression="JOB_NAME" />
                     </Columns>
                 </asp:GridView>
             </div>

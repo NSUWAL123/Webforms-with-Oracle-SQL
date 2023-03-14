@@ -18,9 +18,10 @@
     <nav class="navbar navbar-light bg-light px-4">
         <a class="navbar-brand fw-bold " runat="server" href="~/Home.aspx" style="color: #888A8C"><span style="color: #00CB5B";><</span>ISLINGTON TECHNOLOGIES<span style="color: #00CB5B">></span></a>
         <div class="d-flex w-50 justify-content-around">
-            <a href="/EmployeeHistoryMappingForm.aspx" class="btn nav-item nav-link fw-bold px-3 py-1 text-white" style="background-color: #FF9C00">Job History</a>
-            <a href="/EmployeeOfTheMonthForm.aspx" class="btn nav-item nav-link fw-bold px-3 py-1 text-white" style="background-color: #FF9C00">Employee of the Month</a>
-            <a href="/VotingRecordForm.aspx" class="btn nav-item nav-link fw-bold px-3 py-1 text-white" style="background-color: #FF9C00">Voting Record</a>
+            <a href="/EmployeeHistoryMappingForm.aspx" class="btn rounded-5 nav-item nav-link px-3 py-1 text-white" style="background-color: #FF9C00">Job History</a>
+            <a href="/EmployeeOfTheMonthForm.aspx" class="btn rounded-5 nav-item nav-link px-3 py-1 text-white" style="background-color: #FF9C00">Employee of the Month</a>
+            <a href="/VotingRecordForm.aspx" class="btn nav-item rounded-5 nav-link px-3 py-1 text-white" style="background-color: #FF9C00">Voting Record</a>
+            <a class="btn rounded-5 text-white" style="background-color: #2ECC71" href="CC6001NI - Advanced Database Systems Development Y22 Autumn (Main Sit) - CW QP.pdf">User Manual</a>
         </div>
     </nav>
     <nav class="navbar navbar-expand-lg navbar-light bg-light w-100" >

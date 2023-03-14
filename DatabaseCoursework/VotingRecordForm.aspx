@@ -8,12 +8,13 @@
     <link href="/content/bootstrap.min.css" rel="stylesheet" />
 </head>
 <body>
+    <form id="form1" runat="server">
     <nav class="navbar navbar-light bg-light px-4">
         <a class="navbar-brand fw-bold " runat="server" href="~/Home.aspx" style="color: #888A8C"><span style="color: #00CB5B";><</span>ISLINGTON TECHNOLOGIES<span style="color: #00CB5B">></span></a>
         <div class="d-flex w-50 justify-content-around">
-            <a href="/EmployeeHistoryMappingForm.aspx" class="btn nav-item nav-link fw-bold px-3 py-1 text-white" style="background-color: #FF9C00">Job History</a>
-            <a href="/EmployeeOfTheMonthForm.aspx" class="btn nav-item nav-link fw-bold px-3 py-1 text-white" style="background-color: #FF9C00">Employee of the Month</a>
-            <a href="/VotingRecordForm.aspx" class="btn nav-item nav-link fw-bold px-3 py-1 text-white" style="background-color: #FF9C00">Voting Record</a>
+            <a href="/EmployeeHistoryMappingForm.aspx" class="btn rounded-5 nav-item nav-link px-3 py-1 text-white" style="background-color: #FF9C00">Job History</a>
+            <a href="/EmployeeOfTheMonthForm.aspx" class="btn rounded-5 nav-item nav-link  px-3 py-1 text-white" style="background-color: #FF9C00">Employee of the Month</a>
+            <a href="/VotingRecordForm.aspx" class="btn rounded-5 nav-item nav-link px-3 py-1 text-white" style="background-color: #FF9C00">Voting Record</a>
         </div>
     </nav>
     <nav class="navbar navbar-expand-lg navbar-light bg-light w-100" >
@@ -28,7 +29,6 @@
             </div>
         </div>
     </nav>
-    <form id="form1" runat="server">
         <div>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" ProviderName="<%$ ConnectionStrings:ConnectionString2.ProviderName %>" SelectCommand="SELECT 
   v.voter_id,
@@ -51,10 +51,14 @@ ORDER BY
                 </SelectParameters>
             </asp:SqlDataSource>
             <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" ProviderName="<%$ ConnectionStrings:ConnectionString2.ProviderName %>" SelectCommand="SELECT &quot;SN&quot;, &quot;EMPLOYEE_NAME&quot;, &quot;DOB&quot;, &quot;CONTACT_NUMBER&quot;, &quot;GENDER&quot;, &quot;SALARY&quot;, &quot;Highest Qualification&quot; AS Highest_Qualification FROM &quot;EMPLOYEE&quot;"></asp:SqlDataSource>
-            <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource2" DataTextField="EMPLOYEE_NAME" DataValueField="SN">
-            </asp:DropDownList>
+            <h3 class="text-center py-3">Voting Record</h3>
+            <div class="d-flex align-items-center justify-content-center pb-4">
+                <p class="fw-bold mx-3">Search the record of employee: </p>
+                <asp:DropDownList class="btn btn-secondary dropdown-toggle" ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource2" DataTextField="EMPLOYEE_NAME" DataValueField="SN">
+                </asp:DropDownList>
+            </div>
         </div>
-        <asp:GridView class="table " ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="VOTER_ID,VOTING_MONTH,VOTING_YEAR,VOTER_CONTACT" DataSourceID="SqlDataSource1">
+        <asp:GridView HeaderStyle-BackColor="#2ECC71" HeaderStyle-ForeColor="White" class="table " ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="VOTER_ID,VOTING_MONTH,VOTING_YEAR,VOTER_CONTACT" DataSourceID="SqlDataSource1">
             <Columns>
                 <asp:BoundField DataField="VOTER_ID" HeaderText="Voter Id" ReadOnly="True" SortExpression="VOTER_ID" />
                 <asp:BoundField DataField="VOTER_NAME" HeaderText="Voter Name" SortExpression="VOTER_NAME" />
