@@ -87,6 +87,8 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Department.aspx" />
     <Content Include="Employee.aspx" />
+    <Content Include="EmployeeHistoryMappingForm.aspx" />
+    <Content Include="EmployeeOfTheMonthForm.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Job.aspx" />
     <Content Include="Role.aspx" />
@@ -96,6 +98,7 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="VotingRecordForm.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -120,6 +123,20 @@
     <Compile Include="Employee.aspx.designer.cs">
       <DependentUpon>Employee.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EmployeeHistoryMappingForm.aspx.cs">
+      <DependentUpon>EmployeeHistoryMappingForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeHistoryMappingForm.aspx.designer.cs">
+      <DependentUpon>EmployeeHistoryMappingForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeOfTheMonthForm.aspx.cs">
+      <DependentUpon>EmployeeOfTheMonthForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeOfTheMonthForm.aspx.designer.cs">
+      <DependentUpon>EmployeeOfTheMonthForm.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -141,6 +158,13 @@
     </Compile>
     <Compile Include="Role.aspx.designer.cs">
       <DependentUpon>Role.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VotingRecordForm.aspx.cs">
+      <DependentUpon>VotingRecordForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VotingRecordForm.aspx.designer.cs">
+      <DependentUpon>VotingRecordForm.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

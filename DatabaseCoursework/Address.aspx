@@ -10,6 +10,11 @@
 <body style="font-family: Verdana">
     <nav class="navbar navbar-light bg-light px-4">
         <a class="navbar-brand fw-bold " runat="server" href="~/Home.aspx" style="color: #888A8C"><span style="color: #00CB5B";><</span>ISLINGTON TECHNOLOGIES<span style="color: #00CB5B">></span></a>
+        <div class="d-flex w-50 justify-content-around">
+            <a href="/EmployeeHistoryMappingForm.aspx" class="btn nav-item nav-link fw-bold px-3 py-1 text-white" style="background-color: #FF9C00">Job History</a>
+            <a href="/EmployeeOfTheMonthForm.aspx" class="btn nav-item nav-link fw-bold px-3 py-1 text-white" style="background-color: #FF9C00">Employee of the Month</a>
+            <a href="/VotingRecordForm.aspx" class="btn nav-item nav-link fw-bold px-3 py-1 text-white" style="background-color: #FF9C00">Voting Record</a>
+        </div>
     </nav>
     <nav class="navbar navbar-expand-lg navbar-light bg-light w-100" >
         <div id="navbarNavAltMarkup" class="w-100">
@@ -52,7 +57,7 @@
                     &nbsp;<asp:LinkButton class="btn btn-success my-4" ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="Insert" />
                 </ItemTemplate>
             </asp:FormView>
-            <div class="d-flex w-100 justify-content-center">
+            <div class="">
                 <asp:GridView class="table" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ADDRESS_ID" DataSourceID="SqlDataSource1">
                     <Columns>
                         <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ControlStyle-BackColor="#FF9C00" ControlStyle-CssClass="m-2 text-light text-decoration-none px-2 py-1 rounded-3"/>
